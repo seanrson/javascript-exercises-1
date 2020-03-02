@@ -1,25 +1,37 @@
-function add () {
-	
+function add (a,b) {
+	return a+b;
 }
 
-function subtract () {
-	
+function subtract (a, b) {
+	return a-b;
 }
 
-function sum () {
-	
+function sum (array) {
+	let total = 0;
+	for (i=0; i<array.length; i++)
+		total+= array[i];
+	return total;
 }
 
-function multiply () {
-	
+function multiply (array) {
+  if (array.length == 0) return;
+  let total = 1;
+  for (i=0; i<array.length; i++)
+	total*= array[i];
+  return total;
+
 }
 
-function power() {
-	
+function power(a, b) {
+	return a**b;
 }
 
-function factorial() {
-	
+function factorial(n) {
+	if (n < 0)
+    return "Integer must be positive!"
+  else if (n == 0) // base case
+    return 1;
+  return n*factorial(n - 1); // recursive call
 }
 
 module.exports = {
@@ -27,6 +39,6 @@ module.exports = {
 	subtract,
 	sum,
 	multiply,
-    power,
+  power,
 	factorial
 }
